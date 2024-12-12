@@ -56,6 +56,7 @@ export const register = async (
   formData: FormData,
 ): Promise<RegisterActionState> => {
   try {
+    throw 1;  // disallow registration for now
     const validatedData = authFormSchema.parse({
       email: formData.get('email'),
       password: formData.get('password'),
